@@ -1,0 +1,14 @@
+* {
+  font-family: "CaskaydiaCove Nerd Font";
+  font-size: 18px;
+  -gtk-icon-theme: "Tela-orange"
+}
+
+.workspaces .focused {
+  transition: background-color 0.3s ease-in;
+  background-color: orange
+}
+
+window.bar {
+  background-color: @theme_bg_color;
+}
