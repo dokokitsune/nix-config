@@ -72,7 +72,7 @@ nix = {
 users.users.wwood = {
 	isNormalUser = true;
 	home = "/home/wwood";
-	extraGroups = [ "wheel" ];
+	extraGroups = [ "networkmanager" "wheel" ];
 };
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -111,6 +111,7 @@ fonts.packages = with pkgs; [
     vulkan-tools
     hyprland
     hyprland-protocols
+    (flameshot.override { enableWlrSupport = true; })
     mako
     networkmanagerapplet
     waybar

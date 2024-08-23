@@ -3,6 +3,7 @@
   let 
     startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     hyprpaper &
+    flameshot &
     hyprctl setcursor Bibata-Modern-Classic 24 &
     gsettings set org.gnome.desktop.interface icon-theme 'Tela-orange' &
       '';
