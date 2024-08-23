@@ -141,7 +141,8 @@
 
    home.packages = with pkgs; [
     firefox
-		discord
+    discord
+    slack
     git
     sops
     zoom-us
