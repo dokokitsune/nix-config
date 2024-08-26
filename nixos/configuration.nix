@@ -36,7 +36,10 @@ nix = {
   # networking.hostName = "nixos"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager = {
+    enable = true;
+    wifi.backend = "iwd";
+  };  # Easiest to use and most distros use this by default.
 
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
@@ -65,7 +68,7 @@ nix = {
 		thunar-archive-plugin
 		thunar-volman
 		];
-};
+  };
 
 
  	 
@@ -125,6 +128,7 @@ fonts.packages = with pkgs; [
  		tldr
     hyprpaper
     wl-clipboard
+    wlogout
     upower
     xwaylandvideobridge
     (catppuccin-sddm.override{
