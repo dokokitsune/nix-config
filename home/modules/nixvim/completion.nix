@@ -13,6 +13,9 @@
         preset = "codicons";
         cmp.enable = true;
       };
+      lsp-lines.enable = true;
+      lsp-status.enable = true;
+      
       cmp_luasnip = {
         enable = true;
       };
@@ -28,6 +31,7 @@
       cmp-nvim-lsp-signature-help = {
         enable = true;
       };
+      
       cmp = {
         enable = true;
         settings = {
