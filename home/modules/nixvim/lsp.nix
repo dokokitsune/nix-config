@@ -10,6 +10,9 @@
         lua-ls.enable = true;
         nixd.enable = true;
         bashls.enable = true;
+        html.enable = true;
+        cssls.enable = true;
+        jsonls.enable = true;
       };
     };
   };

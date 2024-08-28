@@ -13,10 +13,7 @@
           useUserPackages = true;
           users.wwood.imports = [../home/home.nix];
           extraSpecialArgs.inputs = inputs;
-          
-
-
-
+                    
         };
       }
     ];

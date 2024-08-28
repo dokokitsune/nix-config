@@ -4,31 +4,32 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-      home-manager = {
-       url = "github:nix-community/home-manager";
-       inputs.nixpkgs.follows = "nixpkgs";
-      };
-      hyprland = {
-       url = "git+https://github.com/hyprwm/hyprland?submodules=1";
-      };
-      nixvim = {
-				url = "github:nix-community/nixvim";
-				# if you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
-				# url = "github:nix-community/nixvim/nixos-24.05";
-
-				inputs.nixpkgs.follows = "nixpkgs";
-      };
-      sops-nix = {
-        url = "github:mic92/sops-nix";
-        inputs.nixpkgs.follows = "nixpkgs";
-      };
-      ags = {
-        url = "github:aylur/ags";
-      };
-     flake-parts = {
-        url = "github:hercules-ci/flake-parts";
-        inputs.nixpkgs-lib.follows = "nixpkgs";
+    home-manager = {
+     url = "github:nix-community/home-manager";
+     inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprland = {
+     url = "git+https://github.com/hyprwm/hyprland?submodules=1";
+    };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      # if you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
+      # url = "github:nix-community/nixvim/nixos-24.05";
+
+      inputs.nixpkgs.follows = "nixpkgs";
+  };
+  
+    sops-nix = {
+      url = "github:mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    ags = {
+      url = "github:aylur/ags";
+    };
+   flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
+  };
 
 
 
