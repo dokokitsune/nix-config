@@ -99,8 +99,8 @@ fonts.packages = with pkgs; [
     vulkan-tools
     hyprland
     hyprland-protocols
-    (flameshot.override { enableWlrSupport = true; })
     mako
+    hyprshot
     networkmanagerapplet
     waybar
     xdg-desktop-portal-hyprland	
