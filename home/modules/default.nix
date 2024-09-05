@@ -2,6 +2,7 @@
   imports = [
     ./ags
     ./hyprland
+    ./kitty
     ./nixvim
     ./git.nix
     ./dev.nix

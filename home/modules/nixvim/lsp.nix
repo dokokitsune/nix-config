@@ -13,6 +13,7 @@
         html.enable = true;
         cssls.enable = true;
         jsonls.enable = true;
+        pyright.enable = true;
       };
     };
   };
