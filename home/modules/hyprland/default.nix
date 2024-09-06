@@ -130,7 +130,7 @@
           ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
           ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ",Print, exec, hyprshot -m region "
-          ",Print SHIFT, exec hyprshot -m window"
+          ",Print SHIFT, exec, hyprshot -m window"
         ];
 
         binde = [
