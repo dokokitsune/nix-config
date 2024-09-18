@@ -95,7 +95,6 @@ fonts.packages = with pkgs; [
   # $ nix search wget
    environment.systemPackages = with pkgs; [
     btrfs-progs
-    autorandr
     mesa
     vulkan-tools
     hyprland
