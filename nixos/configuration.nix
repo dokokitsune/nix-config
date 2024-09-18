@@ -109,6 +109,7 @@ fonts.packages = with pkgs; [
     fastfetch
     wofi
     wget
+    wireplumber
 		ripgrep
     brightnessctl
  		tldr
@@ -116,6 +117,7 @@ fonts.packages = with pkgs; [
     wl-clipboard
     wlogout
     upower
+    waybar
     xwaylandvideobridge
     (catppuccin-sddm.override{
       flavor = "macchiato";
