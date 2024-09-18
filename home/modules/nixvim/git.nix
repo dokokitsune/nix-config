@@ -7,5 +7,8 @@
         current_line_blame = true;
       };
     };
+    plugins.neogit = {
+      enable = true;
+    };
   };
 }

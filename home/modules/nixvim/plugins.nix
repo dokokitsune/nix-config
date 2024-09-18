@@ -13,8 +13,10 @@
       image.enable = true;
       indent-blankline.enable = true;
       neoscroll.enable = true;
+      mini.enable = true;
       notify.enable = true;
       nix.enable = true;
+      nvim-colorizer.enable = true;
       oil.enable = true;
       treesitter = {
         enable = true;
