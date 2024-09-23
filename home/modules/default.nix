@@ -1,9 +1,9 @@
 {pkgs, lib, inputs, ...}: {
   imports = [
+    ./ags
     ./hyprland
     ./kitty
     ./nixvim
-    ./waybar
     ./git.nix
     ./dev.nix
     ./shell.nix

@@ -18,7 +18,7 @@
 
       inputs.nixpkgs.follows = "nixpkgs";
   };
-  
+    ags.url = "github:Aylur/ags";
     sops-nix = {
       url = "github:mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";

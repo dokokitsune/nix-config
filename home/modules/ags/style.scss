@@ -4,6 +4,16 @@
   -gtk-icon-theme: "Tela-orange"
 }
 
+.rightBox {
+  margin-right: 5px
+}
+
+.workspaces>* {
+  border-radius: 50px;
+  margin: 5px;
+
+}
+
 .workspaces .focused {
   transition: background-color 0.3s ease-in;
   background-color: orange

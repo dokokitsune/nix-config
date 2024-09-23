@@ -36,6 +36,8 @@
   networking.networkmanager = {
     enable = true;
   };
+  security.polkit.enable = true;
+
 
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";

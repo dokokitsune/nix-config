@@ -1,4 +1,4 @@
-{config, pkgs, inputs, sops-nix, ... }:
+{pkgs, inputs, ... }:
 
 {
   imports = [

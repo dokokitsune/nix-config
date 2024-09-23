@@ -93,6 +93,7 @@
           "$mainMod, space, exec, wofi --show drun"
           "$mainMod, P, pseudo,"
           "$mainMod, J, togglesplit,"
+          "CONTROL ALT, DELETE, exec, wlogout"
 
           "$mainMod, left, movefocus, l"
           "$mainMod, up, movefocus, u"
@@ -130,7 +131,7 @@
           ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
           ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ",Print, exec, hyprshot -m region "
-          ",Print SHIFT, exec, hyprshot -m window"
+          "SHIFT,Print , exec, hyprshot -m window"
         ];
 
         binde = [
