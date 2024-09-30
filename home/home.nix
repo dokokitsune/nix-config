@@ -58,6 +58,8 @@
     git
     sops
     zoom-us
+
+    inputs.zen-browser.packages.x86_64-linux.default
   ];
 
   home.pointerCursor = {
