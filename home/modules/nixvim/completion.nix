@@ -15,6 +15,9 @@
       };
       lsp-lines.enable = true;
       lsp-status.enable = true;
+      cmp-treesitter = {
+        enable = true;
+      };
       
       cmp_luasnip = {
         enable = true;
@@ -54,6 +57,7 @@
             {name = "nvim_lsp";}
             {name = "buffer";}
             {name = "path";}
+            {name = "treesitter";}
           ];
           
 

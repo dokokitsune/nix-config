@@ -32,12 +32,13 @@
     };
   services.upower.enable = true;
   nixpkgs.config.allowUnfree = true;
+  
 
   networking.networkmanager = {
     enable = true;
   };
   security.polkit.enable = true;
-
+  services.gnome.gnome-keyring.enable = true;
 
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
@@ -120,6 +121,7 @@ fonts.packages = with pkgs; [
     upower
     waybar
     xwaylandvideobridge
+    lxqt.lxqt-policykit
     (catppuccin-sddm.override{
       flavor = "macchiato";
       font = "CaskaydiaCove Nerd Font";

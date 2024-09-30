@@ -15,6 +15,7 @@
       neoscroll.enable = true;
       notify.enable = true;
       nix.enable = true;
+      nvim-colorizer.enable = true;
       oil.enable = true;
       treesitter = {
         enable = true;
@@ -32,12 +33,20 @@
           "<leader>fh" = "find_tags";
         };
       };
+      toggleterm = {
+        enable = true;
+        settings = {
+          open_mapping = "[[<leader>ft]]";
+        };
+
+      }; 
       todo-comments.enable = true;
       ts-autotag.enable = true;
       wilder = {
         enable = true;
         modes = [ ":" "/" "?" ];
       };
+      
     };
   };
 }

@@ -2,8 +2,10 @@
   programs.nixvim = {
     colorschemes.catppuccin= {
       enable = true;
-      settings.flavour = "macchiato";
-    };
+      settings = {
+        flavour = "macchiato";
+        };
+      }; 
     opts = {
       updatetime = 100;
       clipboard = "unnamedplus";

@@ -4,6 +4,7 @@
     startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     hyprpaper &
     flameshot &
+ 
     hyprctl setcursor Bibata-Modern-Classic 24 &
     gsettings set org.gnome.desktop.interface icon-theme 'Tela-orange' &
       '';
@@ -39,16 +40,16 @@
         };
       };
         general = {
-          gaps_in = 3;
-          gaps_out = 5;
+          gaps_in = 2;
+          gaps_out = 2;
           border_size = 1;
-          "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+          "col.active_border" = "rgba(f5b027cc)  ";
           "col.inactive_border" = "rgba(595959aa)";
           layout = "dwindle";
           allow_tearing = "false";
         };
         decoration = {
-          rounding = 10;
+          rounding = 5;
           blur = {
             enabled = "true";
             size = 3;
