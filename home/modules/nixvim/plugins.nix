@@ -40,7 +40,6 @@
         };
 
       }; 
-      todo-comments.enable = true;
       ts-autotag.enable = true;
       wilder = {
         enable = true;
