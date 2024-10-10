@@ -35,7 +35,10 @@
      settings = {
        experimental-features = "nix-command flakes";
      };
-    };
+  };
+
+  virtualisation.docker.enable = true;
+
   services.upower.enable = true;
   nixpkgs.config.allowUnfree = true;
   
@@ -72,7 +75,7 @@
 users.users.wwood = {
 	isNormalUser = true;
 	home = "/home/wwood";
-	extraGroups = [ "networkmanager" "wheel" ];
+	extraGroups = [ "networkmanager" "wheel" "docker" ];
 };
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";

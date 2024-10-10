@@ -19,6 +19,7 @@
           jsonls.enable = true;
           pyright.enable = true;
           yamlls.enable = true;
+          dockerls.enable = true;
         };
       };
       none-ls.enable = true;
