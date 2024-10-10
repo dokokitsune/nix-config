@@ -8,10 +8,16 @@
       ./hardware-configuration.nix
 
     ];
-# Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # Use the systemd-boot EFI boot loader.
+
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+
+    };
+    kernelPackages = pkgs.linuxPackages_latest;
+  };
   swapDevices = [ {device = "/swap/swapfile"; } ];
   services.btrfs.autoScrub = {
     enable = true;
@@ -39,6 +45,10 @@
   };
   security.polkit.enable = true;
   services.gnome.gnome-keyring.enable = true;
+  security.pam.services.sddm.enableGnomeKeyring = true;
+
+  services.dbus.packages = with pkgs; [gnome-keyring];
+  
 
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
@@ -92,11 +102,14 @@ fonts.packages = with pkgs; [
  services.displayManager.sddm = {
    enable = true;
    theme = "catppuccin-macchiato";
-   package = pkgs.kdePackages.sddm;
+    package = pkgs.kdePackages.sddm;
+    wayland.enable = true;
  }; 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
    environment.systemPackages = with pkgs; [
+    gnome-keyring
+    libsecret
     btrfs-progs
     mesa
     vulkan-tools
@@ -109,6 +122,7 @@ fonts.packages = with pkgs; [
     xdg-desktop-portal-hyprland	
     kitty
     fastfetch
+    polkit_gnome
     wofi
     wget
     wireplumber
@@ -121,7 +135,6 @@ fonts.packages = with pkgs; [
     upower
     waybar
     xwaylandvideobridge
-    lxqt.lxqt-policykit
     (catppuccin-sddm.override{
       flavor = "macchiato";
       font = "CaskaydiaCove Nerd Font";

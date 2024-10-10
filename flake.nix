@@ -11,6 +11,10 @@
     hyprland = {
      url = "git+https://github.com/hyprwm/hyprland?submodules=1";
     };
+
+    stylix = {
+      url = "github:danth/stylix";
+    };
     nixvim = {
       url = "github:nix-community/nixvim";
       # if you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.

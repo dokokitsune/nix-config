@@ -3,10 +3,11 @@
   let 
     startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
     hyprpaper &
-    flameshot &
  
     hyprctl setcursor Bibata-Modern-Classic 24 &
     gsettings set org.gnome.desktop.interface icon-theme 'Tela-orange' &
+
+    ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1 &
       '';
   in {
 
@@ -25,6 +26,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    
     settings = {
       exec-once = ''${startupScript}/bin/start'';
       monitor = ",highres,auto,1";

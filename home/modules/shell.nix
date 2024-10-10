@@ -12,7 +12,7 @@
       interactiveShellInit = ''
         set fish_greeting
         function ls
-          command ls -ahl  $argv
+          command ls -ahl --color=tty $argv
         end
 
         function gita
