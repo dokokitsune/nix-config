@@ -47,10 +47,11 @@
     enable = true;
   };
   security.polkit.enable = true;
+
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.sddm.enableGnomeKeyring = true;
+  
 
-  services.dbus.packages = with pkgs; [gnome-keyring];
   
 
   # Set your time zone.
@@ -110,7 +111,7 @@ fonts.packages = with pkgs; [
  }; 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-   environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     gnome-keyring
     libsecret
     btrfs-progs

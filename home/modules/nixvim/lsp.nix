@@ -12,7 +12,11 @@
         servers = {
           tsserver.enable = true;
           lua-ls.enable = true;
-          nixd.enable = true;
+          nixd = {
+            enable = true;
+            settings.formatting.command = ["alejandra"];
+          };
+          
           bashls.enable = true;
           html.enable = true;
           cssls.enable = true;
