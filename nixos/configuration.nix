@@ -122,7 +122,6 @@ fonts.packages = with pkgs; [
     mako
     hyprshot
     networkmanagerapplet
-    waybar
     xdg-desktop-portal-hyprland	
     kitty
     fastfetch
@@ -137,7 +136,6 @@ fonts.packages = with pkgs; [
     wl-clipboard
     wlogout
     upower
-    waybar
     xwaylandvideobridge
     (catppuccin-sddm.override{
       flavor = "macchiato";

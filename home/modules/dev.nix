@@ -5,6 +5,7 @@
     (python3.withPackages (ps: with ps; with python3Packages; [
       jupyter
       ipython
+      pip
 
       # Uncomment the following lines to make them available in the shell.
       # pandas
@@ -15,7 +16,6 @@
 
     gcc
     nodejs_22
-    dockerfile-language-server-nodejs
 
      
 
